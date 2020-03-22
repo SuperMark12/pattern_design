@@ -73,7 +73,7 @@ final class RequestIDGenerator {
     /**
      * 生成循环递增序列
      */
-    public short nextSequence() {
+    public synchronized short nextSequence() {
         if (sequence >= SEQ_UPPER_LIMIT) {
             sequence = 0;
         } else {
