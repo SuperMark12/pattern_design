@@ -4,7 +4,7 @@ public class ThredTest {
     public static void main(String[] args) {
 
         Thread1 t1 = new Thread1("01");
-        Thread1 t2 = new Thread1("03");
+        Thread1 t2 = new Thread1("02");
         t1.start();
         t2.start();
 
@@ -14,7 +14,7 @@ public class ThredTest {
 
 class Thread1 extends Thread {
 
-    private static int ticket = 100;
+    private int ticket = 10;
 
     public Thread1(String name) {
         super(name);
